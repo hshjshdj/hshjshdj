@@ -1,0 +1,63 @@
+local DarkraiX = loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Kavo-Ui/main/Darkrai%20Ui", true))()
+
+local Library = DarkraiX:Window("大青蛙","DOORS","",Enum.KeyCode.RightControl)
+
+Tab1 = Library:Tab("召唤功能")
+
+Tab1:Button("召唤摩提",function()
+
+    local a = game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game
+
+		require(a.RemoteListener.Modules.SpiderJumpscare)(require(a), workspace.CurrentRooms["0"].Assets.Dresser.DrawerContainer, 0.2)end)
+
+Tab1:Button("召唤错误",function()
+
+    require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+
+		workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+
+end)
+
+Tab1:Button("召唤尖叫",function()
+
+    require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+
+		workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+
+end)
+
+Tab1:Button("召唤伏击",function()
+
+    loadstring(game:HttpGet"https://raw.githubusercontent.com/sponguss/storage/main/entitySpawner.lua")().createEntity("Ambush")
+
+ 
+
+		local tb=entityTable["Ambush"]
+
+		tb.Speed=120
+
+		tb.Sounds={"PlaySound", "Footsteps"}
+
+		tb.Model="https://github.com/sponguss/storage/raw/main/newambush.rbxm"
+
+		tb.Ambush.Enabled=true
+
+		tb.WaitTime=2.5
+
+ 
+
+		loadstring(game:HttpGet"https://raw.githubusercontent.com/sponguss/storage/main/entitySpawner.lua")().runEntity("Ambush")
+
+end)
+
+Tab1 = Library:Tab("辅助功能")
+
+Tab1:Button("房间全亮",function()
+
+    while wait() do
+
+			game.Lighting.Brightness = 3
+
+		end
+
+end)
