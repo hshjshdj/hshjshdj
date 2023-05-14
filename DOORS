@@ -71,6 +71,30 @@ Tab1:Button("剪刀",function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/shears_done.lua"))()
 
 end)
+
+Tab1 = Library:Tab("其他")
+Tab1:Seperator("欢迎用户"..game.Players.LocalPlayer.Name)
+Tab1:Seperator("当前游戏ID为:" .. game.GameId .. ".")
+Tab1:Seperator("您的注入器是: "..identifyexecutor())
+Tab1:Button("复制作者的QQ",function()
+
+    setclipboard("2285033810")
+
+end)
+Tab1:Button("复制作者的快手号",function()
+
+    setclipboard("2306024610")
+
+end)
+game.StarterGui:SetCore("SendNotification", {
+
+        Title = "欢迎",
+
+        Text = "欢迎用户"..game.Players.LocalPlayer.Name
+
+    })
+
+    
 local ScreenGui = Instance.new("ScreenGui")
 
 local TextButton = Instance.new("TextButton")
