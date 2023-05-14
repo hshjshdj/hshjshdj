@@ -61,3 +61,50 @@ Tab1:Button("房间全亮",function()
 		end
 
 end)
+local ScreenGui = Instance.new("ScreenGui")
+
+local TextButton = Instance.new("TextButton")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextButton.Parent = ScreenGui
+
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+TextButton.Position = UDim2.new(0.855521917, 0, 0.516025662, 0)
+
+TextButton.Size = UDim2.new(0, 135, 0, 50)
+
+TextButton.Font = Enum.Font.SourceSans
+
+TextButton.Text = "隐藏/打开"
+
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+TextButton.TextScaled = true
+
+TextButton.TextSize = 14.000
+
+TextButton.TextWrapped = true
+
+TextButton.Draggable = true
+
+caonima = false
+
+TextButton.MouseButton1Click:Connect(function()
+
+	if caonima == false then		caonima = true
+
+		game.CoreGui.Darkrai.Main.Visible = false
+
+	else
+
+		caonima = false
+
+		game.CoreGui.Darkrai.Main.Visible = true
+
+	end
+
+end)
