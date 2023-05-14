@@ -945,6 +945,31 @@ game.StarterGui:SetCore("SendNotification", {
     })
 
     
+game.StarterGui:SetCore("SendNotification", {
+
+    Title = "🐸大青蛙🐸",
+
+    Text = "帧率在下面让你们方便看🐸"
+
+})
+
+game.StarterGui:SetCore("SendNotification", {
+
+    Title = "🐸大青蛙🐸",
+
+    Text = "反外挂已启动"
+local vu = game:GetService("VirtualUser")
+
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		   wait(1)
+
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+		end)
+})
 
     local ScreenGui = Instance.new("ScreenGui")
 
