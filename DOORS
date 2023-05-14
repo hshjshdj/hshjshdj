@@ -61,6 +61,11 @@ Tab1:Button("房间全亮",function()
 		end
 
 end)
+Tab1:Button("神圣手雷",function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/HolyGrenadeByNerd.lua"))()
+
+end)
 Tab1:Button("剪刀",function()
 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/shears_done.lua"))()
