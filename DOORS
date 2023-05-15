@@ -60,6 +60,15 @@ local seconds = 1000000
 v1.tryp(workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")], seconds)
 
 end)
+Tab1:Button("把房间的灯破了",function()
+
+    local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
+
+local events = require(game.ReplicatedStorage.ClientModules.Module_Events)
+
+events.breakLights(room, 1)
+
+end)
 
 Tab1 = Library:Tab("辅助功能")
 
