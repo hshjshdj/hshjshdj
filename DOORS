@@ -49,6 +49,17 @@ Tab1:Button("召唤伏击",function()
 		loadstring(game:HttpGet"https://raw.githubusercontent.com/sponguss/storage/main/entitySpawner.lua")().runEntity("Ambush")
 
 end)
+Tab1:Button("召唤红房",function()
+
+    local v1 = require(game.ReplicatedStorage.ClientModules.Module_Events)
+
+local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
+
+local seconds = 1000000
+
+v1.tryp(workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")], seconds)
+
+end)
 
 Tab1 = Library:Tab("辅助功能")
 
